@@ -42,11 +42,17 @@ header {
   left: 20px;
 }
 
+nav {
+  display: flex;
+}
 .logo {
   position: absolute;
   top: 2px;
+  margin-left: 30px;
 }
-
+.menu {
+  margin-left: 30px;
+}
 nav ul {
   list-style: none;
   padding: 0;
@@ -124,6 +130,37 @@ section {
   background-color: #e9ecef;
 }
 
+/*---Content Section---*/
+
+/*---Content Boxes---*/
+#content {
+  background-color: #e9ecef;
+}
+.content-boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box {
+  max-width: 22%;
+  background-color: #3bf4c1;
+  padding: 20px;
+  border-radius: 20px;
+  color: #000;
+}
+
+#content h2 {
+  text-align: center;
+}
+
+#content h3 {
+  color: #ba55d3;
+}
+#content a {
+  color: #ba55d3;
+}
+
 /*---Merch Section---*/
 #merch {
   background-color: #e9ecef;
@@ -141,6 +178,10 @@ section {
 
 .merch-box {
   max-width: 32%;
+}
+/*---Slideshow Section---*/
+.slideshow-container-mobile {
+  display: none;
 }
 .slideshow-container {
   background-color: mediumorchid;
@@ -212,35 +253,18 @@ section {
   }
 }
 
-/*---Content Section---*/
-
-/*---Content Boxes---*/
-#content {
-  background-color: #e9ecef;
-}
-.content-boxes {
+/* Footer Section*/
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  /*---  padding: 10px 0;
+  margin-top: 20px;---*/
+  margin-bottom: 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.box {
-  max-width: 23%;
-  background-color: #3bf4c1;
-  padding: 20px;
-  border-radius: 20px;
-  color: #000;
-}
-
-#content h2 {
-  text-align: center;
-}
-
-#content h3 {
-  color: #ba55d3;
-}
-#content a {
-  color: #ba55d3;
+  align-content: center;
 }
 
 /*---Contact Section---*/
@@ -258,19 +282,7 @@ section {
 .social a img {
   max-width: 32px;
 }
-/* Footer Section*/
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  /*---  padding: 10px 0;
-  margin-top: 20px;---*/
-  margin-bottom: 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-}
+
 /*---Copyright Section---*/
 #copyright-info {
   padding: 0px;
@@ -285,15 +297,95 @@ footer {
 }
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
-  nav ul li {
-    display: block;
-    margin: 10px 0;
+  /*---Navigation---*/
+  nav {
+    flex-wrap: wrap;
   }
+  nav ul li {
+    margin: 0px 3px;
+  }
+  .logo a img {
+    max-width: 75px;
+    height: auto;
+  }
+  .menu {
+    max-width: 80%;
+    margin-left: 0px;
+  }
+  /*---End Navigation---*/
 
   section {
     margin: 10px;
   }
-}
-* {
-  box-sizing: border-box;
+
+  /*font-sizes*/
+  html {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 2.5em; /* 18x2=40 */
+  }
+  h2 {
+    font-size: 2em; /* 18x1.5=32 */
+  }
+  h3 {
+    font-size: 1.625em; /* 18x1.125=26 */
+  }
+  h4 {
+    font-size: 1.375em; /* 16x0.875=22*/
+  }
+
+  /*---Home Section---*/
+  #home {
+    flex-wrap: wrap;
+  }
+  .hero-text {
+    max-width: 90%;
+  }
+  .mission p {
+    font-size: 14px;
+  }
+
+  /*---Content Section---*/
+  .content-boxes {
+    flex-wrap: wrap;
+  }
+  .box {
+    max-width: 95%;
+    margin: 20px 0px;
+  }
+
+  /*---Merch Section---*
+  /*---Slideshow---*/
+  .slideshow-container {
+    display: none;
+  }
+  /*---Hide Images by Default---*/
+  .mySlides-mobile {
+    display: none;
+    width: 90%;
+  }
+  .desktop-dots {
+    display: none;
+  }
+  .slideshow-container-mobile {
+    background-color: mediumorchid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+  }
+
+  /*---Footer Section---*/
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #contact-us {
+    padding: 10px 0px;
+  }
 }
