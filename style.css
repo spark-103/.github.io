@@ -98,11 +98,12 @@ section {
   color: #000;
   max-width: 100%;
   margin: 0px auto;
-  display: flex;
+  /*--- display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-around;---*/
   /* Set a specific height */
-  min-height: 500px;
+  min-height: 600px;
+  align-content: center;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -118,6 +119,8 @@ section {
 
 .hero-text {
   max-width: 50%;
+  text-align: center;
+  margin: auto;
 }
 
 .hero-image {
